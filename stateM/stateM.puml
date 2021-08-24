@@ -1,0 +1,25 @@
+@startuml stateM
+left to right direction
+skinparam state {
+  BackgroundColor white
+'   BorderColor Gray
+'   FontName Impact
+}
+state LabVIEW #lightblue {
+    state entry1 <<inputPin>>
+    state HardwareSetup #LightGreen {
+       state I.O
+        I.O -[hidden]> Controller
+        Controller -[hidden]> Devices
+    }
+    state Preproccessing : Stuff
+    state DoStuff : Stuff
+    entry1 --> Preproccessing
+    Preproccessing --> DoStuff
+    DoStuff --> I.O
+    DoStuff --> Controller
+    DoStuff --> Devices
+}
+[*] --> entry1
+
+@enduml

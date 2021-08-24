@@ -1,0 +1,65 @@
+@startwbs WBS
+' !include style.puml
+<style>
+wbsDiagram {
+  Linecolor DimGray
+  BackgroundColor White
+  RoundCorner 10
+  Margin 10
+  Shadowing 0
+  LineThickness 3
+  MaximumWidth 250
+  MinimumWidth 250
+  HorizontalAlignment center
+  .completed{
+    BackgroundColor LightGreen
+  }
+  .uncompleted{
+    BackgroundColor Salmon
+  }
+  legend {
+  FontSize 16
+  Margin 10
+  BackGroundColor White
+  LineThickness 0
+}
+}
+</style>
+
++ Root - 1
+++ **Category** - 1.1 <<completed>>
++++ Deliverable - 1.1.1 <<completed>>
+++++ Work Package - 1.1.1.1 <<completed>>
+++++ Work Package - 1.1.1.2 <<completed>>
+++++ Work Package - 1.1.1.3 <<completed>>
++++ Deliverable - 1.1.2 <<completed>>
+++++ Work Package - 1.1.2.1 <<completed>>
+++++ Work Package - 1.1.2.2 <<completed>>
++++ Deliverable - 1.1.3 <<completed>>
+++++ Work Package - 1.1.3.1 <<completed>>
+++++ Work Package - 1.1.3.2 <<completed>>
++++ Deliverable - 1.1.4 <<completed>>
+++ **Category** - 1.2 <<completed>>
++++ Deliverable - 1.2.1 <<completed>>
++++ Deliverable - 1.2.2 <<completed>>
++++ Deliverable - 1.2.3 <<completed>>
+++ **Category** - 1.3  <<uncompleted>>
++++ Deliverable - 1.3.1 <<uncompleted>>
++++ Deliverable - 1.3.2 <<uncompleted>>
++++ Deliverable - 1.3.3 <<uncompleted>>
+++++ Work Package - 1.3.3.1 <<uncompleted>>
+++++ Work Package - 1.3.3.2 <<uncompleted>>
++++ Deliverable - 1.3.4<<uncompleted>>
+++ Deliverable - 1.4<<uncompleted>>
++++ Deliverable - 1.4.1<<uncompleted>>
++++ Deliverable - 1.4.2<<uncompleted>>
++++ Deliverable - 1.4.3<<uncompleted>>
++++ Deliverable - 1.4.4<<uncompleted>>
+
+footer Designer: Emil Persson
+
+legend
+| <#80FF80> Completed  |  <#FF8080> Uncompleted |
+endlegend
+
+@endwbs
